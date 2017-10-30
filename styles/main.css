@@ -1,8 +1,21 @@
+.facebook-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url("../images/havana.jpg") no-repeat center;
+    max-width: 30%;
+    height: 400px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: red url("../images/havana.jpg") no-repeat center;
+    background:url("../images/havana.jpg") no-repeat center;
     background-size:cover;
     /* background-color: rgb(255, 253, 162); */
     max-width: 40%;
@@ -20,11 +33,13 @@
 
 .container form {
     margin: auto;
+    max-width:100%;
     
 }
 
-.container input,
-.container button {
+.input-buttons input,
+.input-buttons button {
+    padding-left:10px;
     margin:5px;
     height: 30px;
     border-radius: 10px;
@@ -36,12 +51,33 @@
 }
 
 .input-buttons {
+    max-width:100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     margin: 10px 50px;
     padding: 10px;
 }
+.input-buttons .facebook-button{
+    
+    border-radius:0px;
+    background-color: rgba(255, 253, 255, 0.0);
+    margin:20px auto;
+    width:75%;
+    padding:0;
+    border:0;
+}
+.input-buttons .facebook-input{
+    font:1em Arial;
+    
+}
+.facebook-button img{
+    width: 100%
+}
+/* #facebook{
+    width:75%;
+    height:50px;
+} */
 
 .inner-box {
     border-radius: 10px;

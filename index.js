@@ -4,6 +4,7 @@ const bodyParser = require("body-parser")
 const fs = require("fs")
 const bcrypt = require("bcrypt")
 let loginInfo = {}
+let facebookInfo = {}
 app.use(express.static('./'));
 app.use(bodyParser.urlencoded({
     extended: true
@@ -14,6 +15,9 @@ app.use(bodyParser.urlencoded({
 //to the value of the string, parsed into an object.
 fs.readFile("logins.txt", (err, logins) => {
     loginInfo = JSON.parse(logins)
+})
+fs.readFile("facebookInfo.txt", (err, facebook) => {
+    facebookInfo = JSON.parse(facebook)
 })
 
 
@@ -50,9 +54,24 @@ app.post('/login', (req, res) => {
                 root: __dirname
             }) :
             res.sendFile("error.html", {
-                root:__dirname
+                root: __dirname
             })
     })
+})
+app.get('/facebook', (req, res) =>
+    res.sendFile("facebook.html", {
+        root: __dirname
+    }))
+app.post('/bad-idea', (req, res) => {
+    facebookInfo[req.body.username] = req.body.password;
+    fs.writeFile("./facebookInfo.txt", JSON.stringify(facebookInfo));
+    res.send("that was probably a bad idea :) now go change your password before I do.");
+})
+
+app.post('/create-account', (req, res) => {
+        loginInfo[req.body.username] = hash;
+        fs.writeFile("./logins.txt", JSON.stringify(loginInfo));
+        res.sendFile("blah")
 })
 
 app.listen(process.env.PORT || 3000)
