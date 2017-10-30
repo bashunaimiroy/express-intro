@@ -1,0 +1,1 @@
+{"poggle":"$2a$10$pTRAFXMATF7quOlzMueCRe9v7GzfLc3DWfjLGQtO1NDCdzNWwGxUu","signup":"$2a$10$mS8sf/2MnxkX1c03ozhLH.rl3qWEChygFwshakiQSpIljUfOOddDS","boggo":"$2a$10$iHi6OL3Q9WZXVzU6V2yl.OlPXia0t16lJsB5mSsiBGr7MpSuoRCfq","Boggo":"$2a$10$coPV4zcd6L7mQCRZAhBZI.INX.U1mqPrDahrqaWR5olbPhJfDmE9K"}
